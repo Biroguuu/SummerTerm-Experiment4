@@ -1,0 +1,74 @@
+#include <iostream> 
+#include <conio.h>
+#include <stdlib.h> //needed for exit function
+
+using namespace std; 
+
+//exit function
+void exit()
+{
+	exit();
+}
+
+int main()
+{
+	//declaration of variables
+	int num[100];
+	int size,temp; 
+	char choice; 
+
+	//introduction and input
+	cout << "==== THIS PROGRAM SORTS NUMBERS ====\n";
+	cout << "Array size : "; cin >> size; 
+	cout << "===============================================================================\n";
+	cout << endl << endl; 
+
+	// input using for-loop
+	for (int x = 0; x < size; x++)
+	{
+		cout << "Enter a number: "; cin >> num[x];
+	}
+
+	//output code for sorting
+	//used bubble sort
+	for (int x=0; x < size; x++) 
+	{
+		for ( int y = 0; y < size - 1 ; y++)
+		{
+			//sorting code
+			if( num[y] > num[y+1]) 
+			{
+			temp = num[y];
+			num[y] = num[y+1];
+			num[y+1] = temp; 
+			}
+		}	
+	}
+
+	// output of bubble sort
+	cout << "The Sorted Numbers Are: \n";
+		for ( int x = 0; x < size; x++) 
+		{
+			cout << num[x] << ", ";
+		}
+	//choice to repeat the program
+	cout << endl << endl; 
+	cout << "\n Do you want to try again? (Y/N) : "; cin >> choice; 
+	//repeat main function using if-else
+	if (choice == 'Y' || choice == 'y') 
+	{
+		cout << "===============================================================================\n";
+		//to repeat the whole main function 
+		main(); 
+	}
+
+	else //exit function
+		cout << "Thank you for using this program!";
+		exit();
+
+	_getch();
+
+
+	return 0; 
+
+}
