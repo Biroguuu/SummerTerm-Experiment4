@@ -1,0 +1,133 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std; 
+
+//function for addition 
+void addition()
+{
+	int x,y,result; 
+	cout << "Please enter the value of x: "; cin >> x;
+	cout << "Please enter the value of y: "; cin >> y;
+	result = x + y;  
+	cout << "\n Result: " << result << endl; 
+}
+
+//function for subtraction
+void subtraction()
+{
+	int x,y,result; 
+	cout << "Please enter the value of x: "; cin >> x;
+	cout << "Please enter the value of y: "; cin >> y;
+	result = x - y;  
+	cout << "\n Result: " << result << endl; 
+}
+
+//fucntion for multiplication
+void multiplication()
+{
+	int x,y,result; 
+	cout << "Please enter the value of x: "; cin >> x;
+	cout << "Please enter the value of y: "; cin >> y;
+	result = x * y;  
+	cout << "\n Result: " << result << endl; 
+}
+
+//function for division
+void division()
+{
+	int x,y,result; 
+	cout << "Please enter the value of x: "; cin >> x;
+	cout << "Please enter the value of y: "; cin >> y;
+	result = x - y;  
+	cout << "\n Result: " << result << endl; 
+}
+
+//function for remainder
+void mod()
+{
+	int x,y,result; 
+	cout << "Please enter the value of x: "; cin >> x;
+	cout << "Please enter the value of y: "; cin >> y;
+	result = x % y;  
+	cout << "\n Result: " << result << endl; 
+}
+
+//main function
+int main()
+{
+	//declaration of variables
+	int operation,x,y,result; 
+	char choice; 	
+	
+	//introduction input
+	"===== THIS PROGRAM IS A CALCULATOR =====\n";
+	cout << "|| 1. = Addition || 2. Subtraction || 3. Multiplication || 4. Division || 5. Modulus \n";	
+	cout << "Please choose the operation that you will use: "; cin >> operation; 
+	
+	//case for operation with different operational functions
+	switch (operation)
+	{
+	
+	case 1: //addition 
+	{
+		cout << "=== ADDITION === \n"; 
+		
+		addition();
+		break;   
+	}
+	case 2: //subtraction
+	{
+		cout << "=== SUBTRACTION === \n"; 
+		subtraction();
+		break;   
+	}
+	case 3: //multiplication
+	{
+		cout << "=== MULTIPLICATION === \n"; 
+
+		multiplication();
+		break;   
+	}
+	case 4: //division
+	{
+		cout << "=== DIVISION === \n"; 
+		division();
+		break;   
+	}
+	case 5: //remainder
+	{
+		cout << "=== MODULUS FIND THE REMAINDER === \n"; 
+		mod();
+		break;   
+	}
+	
+	//invalid 
+	default: 
+	cout << "You have entered an invalid operation!!!\n";
+	break;
+}
+	//choice for continue
+		cout << "==========================================================================\n";
+		cout << "Do you want to continue? (Y/N) : "; cin >> choice; 
+		
+		//if-else to repeat the whole main function
+		if (choice == 'y' || choice == 'Y')
+		{
+			cout << "===========================================================================\n";
+			main(); 
+		}
+		
+		//exit
+		else 
+		{
+			cout << "===========================================================================\n";
+			cout << "Thank you for using this program!!!"; 
+		}
+		
+	_getch();
+	
+	return 0; 
+	
+}
